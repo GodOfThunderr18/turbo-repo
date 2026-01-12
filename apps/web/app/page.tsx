@@ -17,7 +17,7 @@ export default function Home() {
     }>
       <TextInput placeholder='Enter room name'></TextInput>
       <button onClick={()=>{
-        router.push("/chat/123")
+        router.push("/chats/123")
       }
       }>Join room</button>
       
