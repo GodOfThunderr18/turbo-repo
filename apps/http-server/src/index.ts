@@ -1,21 +1,14 @@
-import express from 'express';
+import express from "express";
 
 const app = express();
+const PORT = 3001;
 
-app.get("/signup", (req, res) => {
-  res.send("Signup Page");
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.json({ message: "HTTP Server is running" });
 });
 
-app.get("/login", (req, res) => {
-  res.send("Login Page");
-});
-
-app.get("/chat", (req, res) => {
-  res.send("Chat Page");
-});
-
-const PORT =3001;
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
-

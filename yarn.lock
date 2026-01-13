@@ -108,6 +108,11 @@
   resolved "https://registry.npmmirror.com/@next/env/-/env-16.1.0.tgz"
   integrity sha512-Dd23XQeFHmhf3KBW76leYVkejHlCdB7erakC2At2apL1N08Bm+dLYNP+nNHh0tzUXfPQcNcXiQyacw0PG4Fcpw==
 
+"@next/env@16.1.1":
+  version "16.1.1"
+  resolved "https://registry.npmmirror.com/@next/env/-/env-16.1.1.tgz"
+  integrity sha512-3oxyM97Sr2PqiVyMyrZUtrtM3jqqFxOQJVuKclDsgj/L728iZt/GyslkN4NwarledZATCenbk4Offjk1hQmaAA==
+
 "@next/eslint-plugin-next@^15.5.0":
   version "15.5.9"
   resolved "https://registry.npmmirror.com/@next/eslint-plugin-next/-/eslint-plugin-next-15.5.9.tgz"
@@ -119,6 +124,11 @@
   version "16.1.0"
   resolved "https://registry.npmmirror.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-16.1.0.tgz"
   integrity sha512-Tr0j94MphimCCks+1rtYPzQFK+faJuhHWCegU9S9gDlgyOk8Y3kPmO64UcjyzZAlligeBtYZ/2bEyrKq0d2wqQ==
+
+"@next/swc-win32-x64-msvc@16.1.1":
+  version "16.1.1"
+  resolved "https://registry.npmmirror.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-16.1.1.tgz"
+  integrity sha512-Ncwbw2WJ57Al5OX0k4chM68DKhEPlrXBaSXDCi2kPi5f4d8b3ejr3RRJGfKBLrn2YJL5ezNS7w2TZLHSti8CMw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -1309,6 +1319,7 @@ http-errors@^2.0.0, http-errors@^2.0.1, http-errors@~2.0.1:
   dependencies:
     "@types/express" "^5.0.6"
     express "^5.2.1"
+    next "^16.1.1"
 
 iconv-lite@^0.7.0, iconv-lite@~0.7.0:
   version "0.7.2"
@@ -1713,6 +1724,28 @@ negotiator@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmmirror.com/negotiator/-/negotiator-1.0.0.tgz"
   integrity sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==
+
+next@^16.1.1:
+  version "16.1.1"
+  resolved "https://registry.npmmirror.com/next/-/next-16.1.1.tgz"
+  integrity sha512-QI+T7xrxt1pF6SQ/JYFz95ro/mg/1Znk5vBebsWwbpejj1T0A23hO7GYEaVac9QUOT2BIMiuzm0L99ooq7k0/w==
+  dependencies:
+    "@next/env" "16.1.1"
+    "@swc/helpers" "0.5.15"
+    baseline-browser-mapping "^2.8.3"
+    caniuse-lite "^1.0.30001579"
+    postcss "8.4.31"
+    styled-jsx "5.1.6"
+  optionalDependencies:
+    "@next/swc-darwin-arm64" "16.1.1"
+    "@next/swc-darwin-x64" "16.1.1"
+    "@next/swc-linux-arm64-gnu" "16.1.1"
+    "@next/swc-linux-arm64-musl" "16.1.1"
+    "@next/swc-linux-x64-gnu" "16.1.1"
+    "@next/swc-linux-x64-musl" "16.1.1"
+    "@next/swc-win32-arm64-msvc" "16.1.1"
+    "@next/swc-win32-x64-msvc" "16.1.1"
+    sharp "^0.34.4"
 
 next@16.1.0:
   version "16.1.0"
@@ -2582,6 +2615,9 @@ wrappy@1:
 "ws-server@file:D:\\nextjs\\turbo-repo\\apps\\ws-server":
   version "1.0.0"
   resolved "file:apps/ws-server"
+  dependencies:
+    "@types/ws" "^8.18.1"
+    ws "^8.19.0"
 
 ws@^8.19.0:
   version "8.19.0"

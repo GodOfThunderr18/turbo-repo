@@ -1,27 +1,31 @@
 "use client"
-import { TextInput } from '@repo/ui/text-input';
+import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function Home() {
-  const router=useRouter();
+  const router = useRouter();
+
+  useEffect(() => {
+    const user = localStorage.getItem("chatUser");
+    if (user) {
+      router.push("/chats/lobby");
+    } else {
+      router.push("/signin");
+    }
+  }, [router]);
+
   return (
-    <div style={
-      {
-        height: '100vh',
-        width: '100vw',
-        display: 'flex',
-        background: 'black',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }
-    }>
-      <TextInput placeholder='Enter room name'></TextInput>
-      <button onClick={()=>{
-        router.push("/chats/123")
-      }
-      }>Join room</button>
-      
-      
+    <div style={{
+      height: '100vh',
+      width: '100vw',
+      display: 'flex',
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      justifyContent: 'center',
+      alignItems: 'center',
+      color: 'white',
+      fontSize: '20px',
+    }}>
+      Loading...
     </div>
   );
 }
